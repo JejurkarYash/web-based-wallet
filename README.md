@@ -1,8 +1,5 @@
-# React + Vite
+# Web Based Wallet
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple web based etherium wallet that allows user's to create a multiple wallet ang generate a private and public key
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Web Based Wallet ](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md)
