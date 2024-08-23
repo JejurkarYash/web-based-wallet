@@ -16,8 +16,6 @@ function App() {
   const [etheriumWallets, setEtheriumWallets] = useState(null);
 
   const handleOnCreateWallet = async () => {
-    console.log("Create new Wallet");
-
     const mnemonic = generateMnemonic();
     console.log(mnemonic);
     setMnemonic(mnemonic);
@@ -25,24 +23,23 @@ function App() {
   };
 
   const handleOnNext = () => {
-    console.log("next button is clicked ");
     setCurrentStep("addWallets");
   };
 
   const handleSolanaWallet = () => {
-
-   
-
-
     setCurrentStep("solanaWallets");
   };
   const hadleEheriumWallet = () => {
     setCurrentStep("eheriumWallets");
   };
 
+  const handleOnBack = () => {
+    setCurrentStep("addWallets");
+  };
+
   return (
     <div className=" h-screen w-screen bg-[#111113] text-white  overflow-auto   ">
-      <div className=" container flex flex-col justify-center items-center">
+      <div className=" container flex flex-col justify-center items-center md:flex md:flex-col md:justify-center md:items-center ">
         {currentStep === "getStarted" && (
           <GetStarted onCreate={handleOnCreateWallet} />
         )}
@@ -55,8 +52,12 @@ function App() {
             addEheriumWallets={hadleEheriumWallet}
           />
         )}
-        {currentStep === "solanaWallets" && <SolanaWallets />}
-        {currentStep === "eheriumWallets" && <EtheriumWallets />}
+        {currentStep === "solanaWallets" && (
+          <SolanaWallets onBack={handleOnBack} />
+        )}
+        {currentStep === "eheriumWallets" && (
+          <EtheriumWallets onBack={handleOnBack} />
+        )}
       </div>
     </div>
   );

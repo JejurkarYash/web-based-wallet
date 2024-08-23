@@ -2,7 +2,7 @@ import React from "react";
 
 const AddWallets = ({ addSolanaWallets, addEheriumWallets }) => {
   return (
-    <div className=" flex flex-col justify-center items-center space-y-8 ">
+    <div className=" flex flex-col justify-center items-center space-y-8 md:items-center md:text-center md:justify-center ">
       <div className=" flex flex-col justify-center items-center space-y-3 ">
         <h1 className=" text-3xl text-white font-semibold mt-32  md:text-4xl   ">
           Select Network
